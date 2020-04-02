@@ -1,10 +1,11 @@
 <button (click)="animate()">Animate</button>
 <button (click)="boxState = 'special'">Set Special State</button>
+<button (click)="visible = !visible">Toggle Visiblity</button>
 
 <hr />
 
 <div class="wrap">
-	<div class="box" [@box]="boxState">
+	<div class="box" [@box]="boxState" *ngIf="visible">
 		<h4>{{ boxState | uppercase }}</h4>
 	</div>
 </div>
